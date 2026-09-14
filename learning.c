@@ -1,16 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int x, z = 5;
-    double y;
-    y = z / 4;       // 4 is a int, so z stays an int and 5 / 4 = 1.25 but becomes 1.00
-    printf("y = %.2f\n", y);
-// OR
-    y = (double)z / 4; // Explicitly turns z into a double first -> 5.0 / 4 = 1.25
-    printf("y = %.2f\n", y);
-// OR
-    y = z / 4.0;     // 4.0 is a double, so z is promoted to a double -> 5.0 / 4.0 = 1.25
-    printf("y = %.2f\n", y);    
+
+    int i = 3, j = 2;
+    double x, y = 3.14;
+
+    x = i/j; // Integer division: i/j is 1
+    printf("x1: %1.2f \n",x);
+   
+    x = i/(double)j; // Typecast j; floating point division
+    printf("x2: %1.2f \n",x);
+
+    x = (double)i/j; // Typecast i; floating point division
+    printf("x3: %1.2f \n ",x);
 
     return 0;
 }
