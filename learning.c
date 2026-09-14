@@ -3,6 +3,7 @@
     
 int main() {
     int i, val;
+    srand(50); // Seed the random number generator with a fixed value for reproducibility
     for (i = 0; i < 4; i++) {
         val = rand(); // Generate a (pseudo) random value between 0 and RAND_MAX
         printf("%d ", val);
