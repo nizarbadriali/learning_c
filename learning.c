@@ -13,6 +13,7 @@ int main() {
 
     x = (double)i/j; // Typecast i; floating point division
     printf("x3: %1.2f \n ",x);
-
+//notice 2nd and 3rd are the same since it doesn't matter which one is typecasted to double, 
+//as long as one of them is a double, the division will be floating point division.
     return 0;
 }
