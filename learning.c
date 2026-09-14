@@ -1,17 +1,16 @@
 #include <stdio.h>
-    
+double process(double x, double y) {
+
+    x = x + 1;
+    return x + y;
+
+}
+
 int main() {
-    int i;
-    double grades [5]; // Array to hold 5 grades
-    grades [0] = 85.5; // Assigning values to the array
-    grades [1] = 90.0;
-    grades [2] = 78.5;
-    grades [3] = 92.0;
-    grades [4] = 88.5;
-    for (i = 0; i < 5; i++) {
-        printf("Grade %d: %.1f\n", i, grades[i]); // Print each grade
-        printf("%p\n", &grades[i]); // Print the address of each grade
-        printf("At index: grades[%d]\n", i);   
-    }
-    return 0;
+
+    double a[3] = {4.1, 2.5, 3.3};
+    double b;
+    b = process( a[0] , a[1] );
+    printf("%1.1f %1.1f", b, a[0]);
+
 }
