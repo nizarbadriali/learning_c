@@ -18,5 +18,11 @@ int main() {
     // 4. c / i * d
     printf("4. c / i * d   = %f\n", c / i * d); // will be double as well
 
+     //3. s / d, however now lets reduce amount of 0's in the output
+    printf("3. s / d       = %.2f\n", s / d); // will be double still
+
+    //4. c / i * d, however now lets reduce amount of 0's in the output
+    printf("4. c / i * d   = %.2f\n", c / i * d); // will be double still
+
     return 0;
 }
