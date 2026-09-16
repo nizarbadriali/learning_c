@@ -1,16 +1,10 @@
 #include <stdio.h>
-double process(double x, double y) {
-
-    x = x + 1;
-    return x + y;
-
-}
 
 int main() {
+    char word1[] = "dig";
+    char word2[] = "cat";
 
-    double a[3] = {4.1, 2.5, 3.3};
-    double b;
-    b = process( a[0] , a[1] );
-    printf("%1.1f %1.1f", b, a[0]);
-
+    printf("Word 1: %s\n", word1);
+    printf("Word 2: %s\n", word2);
+    return 0;
 }
