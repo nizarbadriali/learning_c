@@ -1,10 +1,15 @@
 #include <stdio.h>
 
 int main() {
-    char word1[] = "dig";
-    char word2[] = "cat";
 
-    printf("Word 1: %s\n", word1);
-    printf("Word 2: %s\n", word2);
+    int a[3] = {423, 12, -780};
+    int *ptr;
+
+    ptr = &a[0];
+
+    printf("%d \t", *ptr );
+    printf("%d \t", *(ptr+1) ); // ptr goes up 1 memory then derefencers, 
+    printf("%d \t", *(ptr+2) );
+
     return 0;
 }
