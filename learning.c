@@ -1,12 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h> // Required for time()
+
 
 int main() {
+    // Seed the random number generator using the current time
+    srand(time(NULL)); 
 
-    int x = 5;
-    int y = ++x * 3;
-    
-    printf("Value of y: %d\n", y);
-    printf("Value of x: %d\n", x);
-
-    return 0;
+    printf("%d\n", rand());
+    printf("%d\n", rand());
 }
