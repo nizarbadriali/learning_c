@@ -1,11 +1,20 @@
 #include <stdio.h>
 
-int main() {
-    int a[3] = {1, 2, 3};
-    int b[3] = {4, 5, 6};
-    int *ptr = a;       
-    ptr++;              
-    printf("%d %p\n", *ptr, ptr); 
-    return 0;
+int* modify_and_shift(int *ptr) {
+    *ptr = *ptr * 2;   // Step 1
+    ptr = ptr - 1;     // Step 2
+    return ptr;        // Step 3
 }
 
+int main() {
+    int arr[5] = {10, 20, 30, 40, 50};
+    int *p;
+
+    p = modify_and_shift(arr + 3);
+
+    printf("%d\n", arr[3]);
+    printf("%d\n", p[0]);
+    printf("%d\n", p[1]);
+
+    return 0;
+}
