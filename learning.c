@@ -19,4 +19,4 @@ int main() {
     printf("%d\n", p[-2]);
 
     return 0;
-}x
+}
