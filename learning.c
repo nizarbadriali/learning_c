@@ -1,22 +1,20 @@
 #include <stdio.h>
 
-int* ModifyValues(int *ptr) {
-    *(ptr - 1) = *(ptr - 1) + 2;   // Line 1
-    *(ptr + 1) = *(ptr + 1) * 3;   // Line 2
-    ptr = ptr + 1;                 // Line 3
-    return ptr;                    // Line 4
+void inspect(char str[]) {
+    *(str + 2) = '\0';
+    printf("%d\n", sizeof(str));
 }
 
 int main() {
-    int arr[5] = {2, 4, 6, 8, 10};
-    int *p;
+    char a[] = {'c', 'o', 'd', 'e'};
+    char b[] = "code";
 
-    p = ModifyValues(arr + 2);
+    printf("%d\n", sizeof(a) + 2);
+    printf("%d\n", sizeof(b) + 2);
+    printf("%d\n", sizeof(b + 100));
 
-    printf("%d\n", arr[1]);
-    printf("%d\n", arr[3]);
-    printf("%d\n", p[0]);
-    printf("%d\n", p[-2]);
+    inspect(b);
+    printf("%s\n", b);
 
     return 0;
 }
