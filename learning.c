@@ -1,20 +1,20 @@
 #include <stdio.h>
+#define DIM 6
 
-void inspect(char str[]) {
-    *(str + 2) = '\0';
-    printf("%d\n", sizeof(str));
-}
+replace_first(
 
-int main() {
-    char a[] = {'c', 'o', 'd', 'e'};
-    char b[] = "code";
+int main(void) {
+    int a[DIM] = {4, 0, -7, 3, -2, 8};
+    int replacement = 10;
+    int original;
 
-    printf("%d\n", sizeof(a) + 2);
-    printf("%d\n", sizeof(b) + 2);
-    printf("%d\n", sizeof(b + 100));
+    //program the function to replace the first negative number in the array with the replacement value
 
-    inspect(b);
-    printf("%s\n", b);
+    printf("Original: %d\n", original);
+
+    for (int i = 0; i < DIM; i++) {
+        printf("%d ", a[i]);
+    }
 
     return 0;
 }
